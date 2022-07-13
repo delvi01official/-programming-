@@ -42,11 +42,10 @@ const client = new Client({
                 console.error(error);
             }
             return interection.reply({
-                content: 'There was an error trying to execute that command!'
+                content: 'There was an error trying to execute that command!',
                 ephemeral: true
             });
-        };
-      });
+        });
 
       client.login(config.token);
 
