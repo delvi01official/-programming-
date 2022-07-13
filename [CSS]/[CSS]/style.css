@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+header {
+height: 100px;
+box-shadow: 3px 7px 15px 12px #7c7474;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+header a {
+margin-right: 16px;
+text-decoration: none;
+color: rgba(0, 0, 0, 0.139);
+}
+
+header a:hover {
+color: rgba(0, 0, 0, 0.744);
+}
+
+.container {
+margin-top: 100px;
+display: flex;
+justify-content: center;
+
+}
+
+.container a {
+background-color: blueviolet;
+color: white;
+text-decoration: none;
+padding: 10px;
+border: 1px solid black;
+}
+
+.container a:hover {
+background-color: rgb(0, 139, 238);
+
+
+}

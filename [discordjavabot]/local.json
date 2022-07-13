@@ -1,0 +1,19 @@
+{
+    "vousavesdejacreeuneticket": "You have already created a ticket!",
+    "selectionmezlacategoriedevotreticket": "Select the category of your ticket",
+    "acreeunticket": "created a ticket",
+    "fermerleticket": "Close the ticket",
+    "aucunecategorieselectioneefermetureduticket": "No category selected. Closing the ticket",
+    "annularlafermute": "Cancel the close of the ticket",
+    "etesvoussurdevouloirfermerleticket": "Are you sure you want to close the ticket?",
+    "ticketfermepar": "Ticket closed by",
+    "supprimerleticket": "Delete the ticket",
+    "controledesticket": "Control of the ticket",
+    "fermetureduticketannule": "Closing the ticket canceled",
+    "sauvegardedesmessages": "Saved messages",
+    "logsduticket": "Ticket logs",
+    "creepar": "Created by",
+    "etsupprimepar": "Deleted by",
+    "cliquezicipourvoirleslogs": "Click to see the logs",
+    "logsdevotreticket": "Logs of your ticket"
+}

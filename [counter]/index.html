@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex flex-col mx-auto items-center min-h-screen justify-center bg-gray-200 content-center">
+
+        <div class="rounded shadow-xl hover:shadow-md mb-12 w-64 p-4 bg-white">
+          <div class="flex items-center">
+            <div class="flex ">
+              <span class=" bg-gray-200 rounded-md p-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase text-primary">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+            </div>
+            <div class="flex-1  ml-4 text-sm">
+              <p class="font-bold mb-3">TOTAL PROJECTS
+              </p>
+              <div class="flex items-center justify-between mb-3">
+                <h4 class="font-bold text-3xl flex-grow mb-0">
+                  <span x-data="animatedCounter(673, 200, 0)" x-init="updatecounter" x-text="Math.round(current)"></span>
+                </h4>
+                <span class="bg-red-100 rounded flex pt-1 px-3 text-xs py-0.5 text-red-700 font-bold"><i class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>5.02 %<span>
+                  </span></span>
+              </div>
+              <p class="text-muted text-truncate mb-0">Projects this month</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="text-4xl text-black text-center font-bold p-12 rounded-md bg-white w-42 mb-6 " x-data="animatedCounter(300, 200)" x-init="updatecounter" x-text="Math.round(current)"></div>
+      
+        <div x-data="animatedCounter(780, 200)" x-init="updatecounter" x-text="Math.round(current)"></div>
+      
+      </div>
+      
+      <script>
+        function animatedCounter(targer, time = 200, start = 0) {
+          return {
+            current: 0,
+            target: targer,
+            time: time,
+            start: start,
+            updatecounter: function() {
+              start = this.start;
+              const increment = (this.target - start) / this.time;
+              const handle = setInterval(() => {
+                if (this.current < this.target)
+                  this.current += increment
+                else {
+                  clearInterval(handle);
+                  this.current = this.target
+                }
+              }, 1);
+            }
+          };
+        }
+      </script>
+</body>
+</html>
