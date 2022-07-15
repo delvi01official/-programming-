@@ -1,5 +1,6 @@
 .friendrow{
     display: flex;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .friend{
@@ -12,6 +13,7 @@
     font-size: 12px;
     display: flex;
     flex-direction: column;
+    margin-right: 16px;
 
 
 }
