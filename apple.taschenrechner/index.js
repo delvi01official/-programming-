@@ -39,5 +39,50 @@ for (let i = 0; i < numbers.length; i++) {
         }
 
         function getSign() {
-            for ()
+            for (let i = 0; i < signs.length; i++) {
+                signs[i].addEventListener('click', (e) => {
+                    sign = e.target.getAttribute('value');
+                    isFirstValue = true;
+                })
+            }
         }
+        getSign();
+
+        equals.addEventListener('click', () => {
+            result.innerHTML = "";
+            if (sign == "+") {
+                resultValue = firstValue + secondValue;
+            } else if (sign == "-") {
+                resultValue = firstValue - secondValue;
+            } else if (sign == "*") {
+                resultValue = firstValue * secondValue;
+            } else if (sign == "/") {
+                resultValue = firstValue / secondValue;
+            }
+            result.innerHTML = resultValue;
+            firstValue = resultValue;
+            secondValue = "";
+
+            checkResultLength();
+        })
+
+        function checkResultLength() {
+            resultValue = JSON.stringify(resultValue);
+
+            if (resultValue.length > 8) {
+                resultValue = JSON.parse(resultValue);
+                result.innerHTML = resultValue.toFixed(5);
+            }
+
+        }
+
+        negative.addEventListener('click', () => {
+            result.innerHTML = "";
+            if(firstValue != "") {
+                result.Value = firstValue / 100;
+                firstValue = resultValue;
+
+            } 
+
+            result.innerHTML = resultValue;
+        });
